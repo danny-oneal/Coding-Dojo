@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+}
+h1 {
+    background-color: black;
+    color: white;
+    padding-left: 0.5em;
+    font-weight: 700;
+}
+
+h2 {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 0.5em;
+    font-weight: 100;
+}
+
+h3 {
+    background-color: azure;
+    padding: 0.5em;
+    text-align: right;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+#cloud {
+    color:aqua
+}

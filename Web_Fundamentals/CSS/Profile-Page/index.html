@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  </head>
+  <body>
+    <header>
+      <nav id="top-nav">
+        <div id="top-left-nav">
+          <p id="logo">Profile</p>
+          <p class="nav-link">Home</p>
+          <p class="nav-link">My Profile</p>
+          <p class="nav-link">Find Connections</p>
+        </div>
+        <button type="button" id="sign-out-button">Sign Out</button>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div id="left-col">
+        <div class="user-card">
+          <div class="header"></div>
+          <div class="widget-body">
+            <img class="avatar" alt="generic user img" src="icons/user-circle.png" />
+            <h1 class="username">Jane Doe</h1>
+            <div class="user-thumb-text"><img class="thumb" alt="map marker" src="icons/map-marker.png" /><p>Seattle</p></div>
+            <p>Developer | Engineer | Problem Solver</p>
+            <p class="description">Master of Shadows and the Internet!</p>
+            <div class="user-thumb-text" href=""><img class="thumb" alt="gear icon" src="icons/gear.png" /><a href="">edit profile</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="widget-top">
+            <p>Education</p>
+          </div>
+          <div class="widget-body">
+            <div class="edu-item">
+              <h2>Coding Dojo - Full Stack Bootcamp</h2>
+              <p class="edu-date-range">Dec 2019 - Mar 2020</p>
+              <p class="detail">Triple black belt in Python, MERN, and C#</p>
+            </div>
+            <div class="edu-item">
+              <h2>Seattle Central College</h2>
+              <p class="edu-date-range">Dec 2017 - Dec 2018</p>
+              <p class="detail">Web Application Developer Certificate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="right-col">
+        <div>
+          <div class="widget-top">
+            <p><span class="badge">2</span> Connection Requests</p>
+          </div>
+          <div class="widget-body">
+            <div class="connection-request">
+              <div class="connection">
+                <img src="icons/user-circle.png"  class="connection-icon" alt="user icon" />
+                <p>Todd E</p>
+              </div>
+              <div class="connection-actions">
+                <img src="icons/accept-circle.png" class="connection-icon" alt="user icon" />
+                <img src="icons/close-circle.png" class="connection-icon" alt="user icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-top">
+            <p><span class="badge">500+</span> Your Connections</p>
+          </div>
+          <div class="widget-body">
+            <div class="connection">
+              <img src="icons/user-circle.png" class="connection-icon" alt="user icon" />
+              <p>Adrian D</p>
+            </div>
+            <div class="connection">
+              <img src="icons/user-circle.png" class="connection-icon" alt="user icon" />
+              <p>Anne J</p>
+            </div>
+            <div class="connection">
+              <img src="icons/user-circle.png" class="connection-icon" alt="user icon" />
+              <p>Alayne T</p>
+            </div>
+            <div class="connection">
+              <img src="icons/user-circle.png" class="connection-icon" alt="user icon" />
+              <p>Arry Y</p>
+            </div>
+          </div>
+          <div class="widget-footer">
+            <a href="#">View More</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

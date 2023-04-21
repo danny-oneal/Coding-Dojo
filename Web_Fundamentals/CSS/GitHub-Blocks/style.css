@@ -1,0 +1,44 @@
+#main {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  row-gap: 1em;
+  font-family: sans-serif;
+  border-top: 2px solid black;
+}
+
+main > p {
+  text-align: center;
+  margin: 0;
+}
+
+#header {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+#main > section {
+  padding: 1em;
+  display: flex;
+}
+
+.octodex-image {
+  width: 15em;
+  height: 15em;
+}
+
+#first-row {
+  background-color: aqua;
+  justify-content: space-between;
+}
+
+#second-row {
+  background-color: darksalmon;
+  justify-content: space-around;
+}
+
+#third-row {
+  background-color: white;
+  justify-content: space-between;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Content</title>
+    <style>
+        th:not(:last-child),
+        td:not(:last-child) {
+            border-right: 1px solid black;
+        }
+
+        td {
+            border-top: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #code-brackets {
+            border: 3px solid black;
+            width: auto;
+            font-size: 3em;
+        }
+        textarea {
+            vertical-align: top;
+        }
+        .form-element {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Danny O'Neal</h1>
+    <img src="images/Avatar.png" style="width: 150px;height: auto;border-radius:50%" alt="Profile picture">
+    <div>
+        <img src="images/github_icon.png" alt="Github icon"><a href="https://github.com/danny-oneal">My Github</a>
+        <img src="images/linkedin_icon.png" alt="LinkedIn icon"><a href="https://www.linkedin.com">My LinkedIn</a>
+        <img src="images/email_icon.png" alt="Email icon"><a href="email:email@email.com">My Email</a>
+    </div>
+    <h3>Technologies</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Front-End</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>Database</th>
+                <th>Concepts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>Django</td>
+                <td>Express</td>
+                <td>MySQL</td>
+                <td>AJAX</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Flask</td>
+                <td>Mongoose</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Unittest</td>
+                <td>React</td>
+                <td></td>
+                <td>REST</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Social Snakes</h3>
+    <span id="code-brackets">&lt;/&gt;</span>
+    <p>Social media app made in Python - <a href="index.html">code</a> | <a href="index.html">deployed</a></p>
+    <h3>Contact Me</h3>
+    <form>
+        <div class="form-element">
+            <label for="name">Name:&nbsp;</label><input type="text" id="name" name="name"><label
+            for="email">Email:&nbsp;</label><input type="text" id="email" name="email">
+        </div>
+        <div class="form-element">
+            <label for="message">Message:&nbsp;</label><textarea name="message" id="message" cols="30" rows="5"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+
+</html>

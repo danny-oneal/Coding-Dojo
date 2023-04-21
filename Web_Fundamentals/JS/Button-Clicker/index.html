@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav id="top-nav">
+        <p id="logo">Dojonary</p>
+        <input type="text" placeholder="Search" />
+        <button type="button" onclick="replaceInnerText(this, 'Logout')">Login</button>
+      </nav>
+    </header>
+    <main id="main-body-content">
+      <section id="left-col">
+        <article class="definition">
+          <div class="word-col">
+            <h2>ninja</h2>
+            <h3>noun</h3>
+            <p>Plural: ninjas</p>
+            <button type="button" onclick="likeNinja()">13 Likes</button>
+          </div>
+          <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+        </article>
+        <article class="definition">
+          <div class="word-col">
+            <h2>ninja</h2>
+            <h3>noun</h3>
+            <p>Plural: ninjas</p>
+            <button type="button" onclick="likeNinja()">37 Likes</button>
+          </div>
+          <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+        </article>
+      </section>
+      <section id="right-col">
+        <div class="add-definition-widget">
+          <h2>Dojonary is defined by YOU</h2>
+          <button type="button" onclick="hideElement(this)">Add Definition</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

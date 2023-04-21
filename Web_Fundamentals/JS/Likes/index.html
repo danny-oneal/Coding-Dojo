@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Likes</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+  <div id="body-container">
+    <header>
+      <p>Network</p>
+    </header>
+    <h1 id="main-header">Your Feed</h1>
+    <main>
+      <section id="user-card">
+        <img src="icons/user-circle.png" alt="user icon">
+        <a href="#">Add an Avatar</a>
+        <h2>Test</h2>
+      </section>
+      <section id="feed-list">
+        <article class="feed-card">
+          <div class="feed-header-row">
+            <h2>Some User</h2>
+            <h3><span id="user-1-like">3</span> like(s)</h3>
+            <button type="button" onclick="increaseNumber(document.getElementById('user-1-like'))">
+              Likes
+            </button>
+          </div>
+          <p>This is some filter text, it can say anthying we like</p>
+        </article>
+        <article class="feed-card">
+          <div class="feed-header-row">
+            <h2>Some User</h2>
+            <h3><span id="user-2-like">3</span> like(s)</h3>
+            <button type="button" onclick="increaseNumber(document.getElementById('user-2-like'))">
+              Likes
+            </button>
+          </div>
+          <p>This is some filter text, it can say anthying we like</p>
+        </article>
+        <article class="feed-card">
+          <div class="feed-header-row">
+            <h2>Some User</h2>
+            <h3><span id="user-3-like">3</span> like(s)</h3>
+            <button type="button" onclick="increaseNumber(document.getElementById('user-3-like'))">
+              Likes
+            </button>
+          </div>
+          <p>This is some filter text, it can say anthying we like</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

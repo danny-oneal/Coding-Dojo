@@ -1,0 +1,190 @@
+/* GENERAL */
+
+:root {
+  --max-width: 960px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#main-content {
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+#right-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#left-col {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+/* HEADER */
+
+header {
+  background-color: black;
+  font-family: "Lato", sans-serif;
+}
+
+#top-left-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+#top-nav {
+  color: white;
+  padding: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+#sign-out-button {
+  background-color: #17a2b8;
+  color: white;
+  padding: 0.5rem;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+/* USER CARD */
+
+.user-card {
+  position: relative;
+}
+
+.header {
+  height: 5em;
+  background-color: #17a2b8;
+}
+
+.user-card > .widget-body {
+  padding-top: 3rem;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.avatar {
+  position: absolute;
+  top: 2rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+.username {
+  font-size: 3rem;
+}
+
+.user-thumb-text {
+  display: flex;
+  font-size: 1.2em;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.thumb {
+  height: 1rem;
+}
+
+/* WIDGET */
+
+.widget-top {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.widget-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 3px solid gray;
+  border-top: 0px;
+  row-gap: 0.75em;
+}
+
+.widget-footer {
+  padding: 1rem;
+  border: 3px solid gray;
+  border-top: none;
+}
+
+/* EDUCATION */
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+
+.edu-date-range {
+  color: gray;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.badge {
+  border-radius: 50%;
+  background-color: gray;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* CONNECTIONS */
+
+.connection {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.connection-icon {
+  width: 2.5rem;
+}
+
+.connection-request {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connection-actions {
+  display: flex;
+  column-gap: 1em;
+}
+
+/* UTILITIES */
+
+.v-algin-center {
+  vertical-align: center;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}

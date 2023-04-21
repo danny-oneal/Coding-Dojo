@@ -1,0 +1,26 @@
+button {
+    display: block;
+    margin: 1em;
+}
+
+#search-button {
+    border-radius: 1em;
+    padding: 0.25em 3em;
+    color:aquamarine;
+    border: 1px solid;
+}
+
+#add-button {
+    border-radius: 50%;
+    padding: 0.5em;
+    color: white;
+    background-color: aquamarine;
+    border: none;
+}
+
+#create-button {
+    background-color: blue;
+    color: white;
+    padding: 0.5em 2em;
+    box-shadow: 5px 3px 10px rgb(0 0 0 / 0.7);
+}
