@@ -35,12 +35,10 @@ const arr3Expected = ["a", "b", "c"];
 function removeAt(items, idx) {
   // code here
   if (idx < 0 || idx >= items.length) return null;
-  const retVal = items[idx];
-  for (let i = idx; i < items.length; i++) {
-    items[i] = items[i + 1];
+  for (let i = idx; i < items.length - 1; i++) {
+    items[i + 1] = items[i];
   }
-  items.pop();
-  return retVal;
+  return items.pop();
 }
 
 console.log(removeAt(arr1, removeIdx1), expectedA1, arr1, arr1Expected);
