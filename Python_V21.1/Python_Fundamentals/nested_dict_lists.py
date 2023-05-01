@@ -27,9 +27,7 @@ def iterateDictionary(some_list):
         items_length = len(items)
         item_idx = 0
         for key, value in items:
-            record += (
-                key + " - " + value + (", " if item_idx < items_length - 1 else "")
-            )
+            record += f"{key} - {value}{', ' if item_idx < items_length - 1 else ''}"
             item_idx += 1
         print(record)
 
