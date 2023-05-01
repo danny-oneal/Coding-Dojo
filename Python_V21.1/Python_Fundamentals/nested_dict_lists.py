@@ -21,7 +21,7 @@ print(x, students, sports_directory, z)
 
 # 2
 def iterateDictionary(some_list):
-    for i in range(0, len(some_list)):
+    for i in range(len(some_list)):
         record = ""
         items = some_list[i].items()
         items_length = len(items)

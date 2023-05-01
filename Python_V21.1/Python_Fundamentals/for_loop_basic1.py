@@ -1,5 +1,5 @@
 # Basic
-for x in range(0, 151):
+for x in range(151):
     print(x)
 
 # Multiples of Five
