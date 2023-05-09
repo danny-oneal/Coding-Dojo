@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="p-8">
+    <div class="bg-gray-200 p-7 w-1/2 mx-auto rounded" action="/process" method="POST">
+        <h2>Submitted Info</h2>
+        <p><strong>Name:</strong> {{session["name"]}}</p>
+        <p><strong>Dojo Location:</strong> {{session["location"]}}</p>
+        <p><strong>Favorite Language:</strong> {{session["language"]}}</p>
+        <p><strong>How did you hear about us?</strong> Friend: {{"yes" if "friend" in session else "no"}}, LinkedIn:
+            {{"yes" if "linkedin" in session else "no"}}, Facebook: {{"yes" if "facebook" in session else "no"}}</p>
+        <p><strong>Your goal:</strong> {{session["goal"]}}</p>
+        <p><strong>Comment:</strong> {{session["comment"]}}</p>
+
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
