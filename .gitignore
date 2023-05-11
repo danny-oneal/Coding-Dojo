@@ -1,4 +1,6 @@
 *.zip
 Belt_Exam/
 .tmp*
+*.bak
+*_data
 node_modules/

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% set title = "Browse Users" %}
+{% block content %}
+<div class="grid space-y-5 w-full">
+    <h1 class="text-5xl text-center justify-self-center">Users</h1>
+    <a href="/users/new" class="justify-self-center p-2 bg-green-500 rounded text-center hover:bg-green-400">Create New
+        User</a>
+    <div class="grid gap-3 grid-cols-4 justify-items-start">
+        {% for one_user in all_users %}
+        <p class="text-2xl">{{one_user.first_name}} {{one_user.last_name}}</p>
+        <p class="text-2xl">{{one_user.email}}</p> <a href="/users/{{one_user.id}}/edit"
+            class="justify-self-end p-2 bg-yellow-500 rounded text-center hover:bg-yellow-400">Edit</a><a
+            href="/users/{{one_user.id}}/delete"
+            class="justify-self-end p-2 bg-red-500 rounded text-center hover:bg-red-400">Delete</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
