@@ -4,3 +4,4 @@ Belt_Exam/
 *.bak
 *_data
 node_modules/
+__pycache__
