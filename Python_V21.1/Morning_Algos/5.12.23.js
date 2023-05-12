@@ -47,6 +47,12 @@ const expected3 = [{ name: "Peanut Butter", quantity: 20 }];
  */
 function updateInventory(newInv, currInv) {
   // loop through the new inventory
+  if (currInv.length === 0) {
+    return newInv;
+  }
+  if (newInv.length === 0) {
+    return currInv;
+  }
   const seen = {};
   for (let i = 0; i < currInv.length; i++) {
     seen[currInv[i].name] = i;
