@@ -67,7 +67,7 @@ const expectedB = -1;
 const numsC = [1, 1, 1, 1, 1, 9, 1, 1, 1, 1, 1];
 const expectedC = 5;
 
-const numsD = [9, -1, 1];
+const numsD = [-1, 1, 9];
 const expectedD = 5;
 
 /**
@@ -89,7 +89,7 @@ function balanceIndex(nums) {
     for (let i = 0; i < nums.length; i++) {
         rightSum -= nums[i];
         // this check needs to happen before adding to the left sum because the current index doesn't count
-        if (leftSum === rightSum && i !== 0) {
+        if (leftSum === rightSum && i !== 0 && i !== nums.length - 1) {
             return i;
         }
         leftSum += nums[i];
@@ -97,7 +97,7 @@ function balanceIndex(nums) {
     return -1;
 }
 
-// console.log(balanceIndex(numsA)); // 2
-// console.log(balanceIndex(numsB)); // -1
-// console.log(balanceIndex(numsC)); // 5
+console.log(balanceIndex(numsA)); // 2
+console.log(balanceIndex(numsB)); // -1
+console.log(balanceIndex(numsC)); // 5
 console.log(balanceIndex(numsD)); // 5
