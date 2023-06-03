@@ -1,5 +1,6 @@
 *.zip
 Belt_Exam/
+Projects/
 .tmp*
 *.bak
 *_data
