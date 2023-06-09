@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+    }
+    .btn-primary:hover {
+        @apply bg-blue-700;
+    }
+    .btn-delete {
+        @apply bg-red-500 text-white font-bold py-2 px-4 rounded;
+    }
+    .btn-delete:hover {
+        @apply bg-red-700;
+    }
+    input[type="text"] {
+        @apply focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm text-slate-900 placeholder-slate-400 rounded-md py-2 pl-5 ring-1 ring-slate-200 shadow-sm;
+    }
+    input[type="checkbox"] {
+        @apply h-5 w-5 border-gray-300 rounded-md;
+    }
+}
