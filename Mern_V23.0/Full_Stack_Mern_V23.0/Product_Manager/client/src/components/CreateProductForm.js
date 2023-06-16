@@ -1,6 +1,7 @@
 import { Paper, FormControl, InputLabel, OutlinedInput, Button } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const styles = {
     paper: {
         width: "20rem",
@@ -17,6 +18,7 @@ export default function LoginForm() {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const navigate = useNavigate();
 
     async function submitForm() {
         try {
@@ -25,6 +27,7 @@ export default function LoginForm() {
             setTitle("");
             setPrice("");
             setDescription("");
+            navigate(0);
         } catch (error) {
             console.error(error);
         }

@@ -1,6 +1,7 @@
 import CreateProductForm from "./components/CreateProductForm";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import EditProductForm from "./components/EditProductForm";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     }
                 />
                 <Route path="/products/:id" element={<ProductDetail />} />
+                <Route path="/products/:id/edit" element={<EditProductForm />} />
             </Routes>
         </div>
     );
