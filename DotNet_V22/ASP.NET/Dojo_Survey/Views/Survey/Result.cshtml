@@ -1,0 +1,28 @@
+@{
+
+    ViewData["Title"] = "Result Info";
+
+}
+<div class="grid gap-5">
+    <h1 class="text-5xl">Submitted Info</h1>
+    <div class="grid grid-cols-2">
+        <div class="text-2xl">Name:</div>
+        <div class="text-2xl">@ViewBag.Survey.Name</div>
+    </div>
+    <div class="grid grid-cols-2">
+        <div class="text-2xl">Dojo Location:</div>
+        <div class="text-2xl">@ViewBag.Survey.DojoLocation</div>
+    </div>
+    <div class="grid grid-cols-2">
+        <div class="text-2xl">Favorite Language:</div>
+        <div class="text-2xl">@ViewBag.Survey.FavoriteLanguage</div>
+    </div>
+    <div class="grid grid-cols-2">
+        <div class="text-2xl">Comment:</div>
+        <div class="text-2xl">
+            @(String.IsNullOrEmpty(@ViewBag.Survey.Comment) ? "No Comment" : @ViewBag.Survey.Comment)
+        </div>
+    </div>
+    <a href="@Url.Action("Index", "Home")" class="btn-blue text-white justify-self-start">Home</a>
+</div>
+

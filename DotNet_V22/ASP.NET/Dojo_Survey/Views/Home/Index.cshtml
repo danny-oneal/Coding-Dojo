@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<div>
+    <h1 class="text-5xl">Welcome to the Dojo Survey</h1>
+        <form action="Process" asp-asp-controller="Survey" method="post" class="grid justify-start w-60">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="text-input mb-3">
+            <label asp-for="DojoLocation">Dojo Location</label>        
+            @Html.DropDownList("DojoLocation", ViewBag.DojoLocation, "Select Location", new { @class = "select-input mb-3" })
+            <label asp-for="FavoriteLanguage">Dojo Location</label>
+            @Html.DropDownList("FavoriteLanguage", ViewBag.Language, "Select Favorite Language", new { @class = "select-input mb-3" })
+            <label asp-for="Comment">Comment</label>
+            <textarea asp-for="Comment" class="text-input mb-3"></textarea>
+            <div class="mb-3">
+                <button type="submit" class="btn-blue">Submit</button>
+            </div>              
+        </form>
+</div>
+
