@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Edit Dish";
+}
+
+@model CRUDelicious.Models.Dish
+
+<h1 class="text-5xl text-center mb-3">Edit Dish</h1>
+<p class="text-center mb-5"><a asp-controller="Home" asp-action="Index" class="link">Home</a> | <a asp-controller="Dish" asp-action="New" class="link">Add a Dish</a></p>
+
+<form asp-controller="Dish" asp-action="Update" asp-route-dishId="@Model.DishId" method="post" class="space-y-4 w-1/2 mx-auto">
+    <div class="flex flex-col">
+        <label asp-for="Name" class="font-semibold">Name</label>
+        <input asp-for="Name" class="text-input" id="Name" />
+        <span asp-validation-for="Name" class="text-red-600"></span>
+    </div>
+
+    <div class="flex flex-col">
+        <label asp-for="Chef" class="font-semibold">Chef</label>
+        <input asp-for="Chef" class="text-input" id="Chef" />
+        <span asp-validation-for="Chef" class="text-red-600"></span>
+    </div>
+
+    <div class="flex flex-col">
+        <label asp-for="Tastiness" class="font-semibold">Tastiness</label>
+        <select asp-for="Tastiness" class="select-input" id="Tastiness">
+            <option value="-1">Select Tastiness</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <span asp-validation-for="Tastiness" class="text-red-600"></span>
+    </div>
+
+    <div class="flex flex-col">
+        <label asp-for="Calories" class="font-semibold">Calories</label>
+        <input asp-for="Calories" class="text-input" id="Calories" type="number" />
+        <span asp-validation-for="Calories" class="text-red-600"></span>
+    </div>
+
+    <div class="flex flex-col">
+        <label asp-for="Description" class="font-semibold">Description</label>
+        <textarea asp-for="Description" class="border rounded-lg px-3 py-2 h-20 focus:outline-none focus:ring-2 focus:ring-blue-600" id="Description"></textarea>
+        <span asp-validation-for="Description" class="text-red-600"></span>
+    </div>
+
+    <button type="submit" class="btn bg-blue-500 hover:bg-blue-700">Update Dish</button>
+</form>

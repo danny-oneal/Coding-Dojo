@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Create Dish";
+}
+
+@model CRUDelicious.Models.Dish
+
+
+    <h1 class="text-5xl text-center mb-3">@Model.Name</h1>
+    <p class="text-center mb-5"><a asp-controller="Home" asp-action="Index" class="link">Home</a> | <a asp-controller="Dish" asp-action="New" class="link">Add a Dish</a></p>
+    
+    <p class="border-b border-black mb-3 w-fit"><strong>@Model.Name by  @Model.Chef</strong></p>
+    <p class="mb-3">@Model.Description</p>
+    <p><strong>Calories:</strong> @Model.Calories</p>
+    <p><strong>Tastiness:</strong> @Model.Tastiness</p>
+
+    <div class="text-center">
+        <a asp-controller="Dish" asp-action="Edit" asp-route-dishId="@Model.DishId"  class="btn bg-blue-500 hover:bg-blue-700">Edit</a>
+        
+        <form asp-controller="Dish" asp-action="Delete" asp-route-dishId="@Model.DishId" method="post" class="inline">
+            <button type="submit" class="btn bg-red-500 hover:bg-red-700">Delete</button>
+        </form>
+    </div>
