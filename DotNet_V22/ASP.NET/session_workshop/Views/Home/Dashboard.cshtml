@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="h-screen p-10 text-center">
+    <div class="grid grid-flow-col pb-3 mb-24 justify-between border-b-2 border-black">
+        <h1 class="text-5xl">Welcome @Context.Session.GetString("Name")!</h1>
+        <a href="/logout" class="btn-blue">Logout</a>
+    </div>
+    <h1 class="text-5xl">@Context.Session.GetInt32("Operand")</h1>
+    <div class="grid grid-cols-2 gap-10 py-10 px-40">
+        <a href="/mutate/add-one" class="bg-yellow-500 hover:bg-yellow-700 text-white p-10">+1</a>
+        <a href="/mutate/minus-one" class="bg-blue-500 hover:bg-blue-700 text-white p-10">-1</a>
+        <a href="/mutate/times-two" class="bg-red-500 hover:bg-red-700 text-white p-10">x 2</a>
+        <a href="/mutate/random" class="bg-green-500 hover:bg-green-700 text-white p-10">Random</a>
+    </div>
+</div>
+
+<h1>@Context.Session.GetString("Name")</h1>
