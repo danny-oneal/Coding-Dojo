@@ -74,5 +74,5 @@ eruptions
     .OrderBy(e => e.Volcano)
     .Select(e => e.Volcano)
     .ToList()
-    .ForEach(e => Console.WriteLine(e));
+    .ForEach(Console.WriteLine);
 
