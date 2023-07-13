@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Create Dish";
+}
+
+@model Dish
+
+<form asp-controller="Dish" asp-action="Create" method="post">
+    <div class="bg-white rounded shadow-lg p-8">
+        <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Create Dish</h1>
+        <div class="grid mb-4">
+            <label class="mb-2 font-bold text-lg text-gray-700" for="Name">Dish Name</label>
+            <input asp-for="Name" class="border py-2 px-3 text-grey-darkest" />
+            <span class="text-red-500" asp-validation-for="Name"></span>
+        </div>
+        <div class="grid mb-4">
+            <label class="mb-2 font-bold text-lg text-gray-700" for="ChefId">Chef</label>
+            <select  asp-for="ChefId" class="border py-2 px-3 text-grey-darkest">
+                @foreach (var chef in ViewBag.Chefs)
+                {
+                    <option value="@chef.ChefId">@chef.FullName</option>
+                }
+            </select>
+             <span class="text-red-500" asp-validation-for="ChefId"></span>
+        </div>
+        <div class="grid mb-4">
+            <label class="mb-2 font-bold text-lg text-gray-700" for="Tastiness">Tastiness</label>
+            <select asp-for="Tastiness" class="border py-2 px-3 text-grey-darkest">
+                <option value="-1">Select Tastiness</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <span class="text-red-500" asp-validation-for="Tastiness"></span>
+        </div>
+        <div class="grid mb-4">
+            <label class="mb-2 font-bold text-lg text-gray-700" for="Calories">Calories</label>
+            <input asp-for="Calories" class="border py-2 px-3 text-grey-darkest">
+            <span class="text-red-500" asp-validation-for="Calories"></span>
+        </div>
+        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white uppercase text-lg mx-auto p-2 rounded" type="submit">Create Dish</button>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Dishes";
+}
+
+@model List<DishViewModel>
+
+<div class="container mx-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-800">
+            <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Dish Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Chef</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Tastiness</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Calories</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            @foreach (var dish in Model)
+            {
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@dish.Name</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@dish.ChefFullName</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@dish.Tastiness</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@dish.Calories</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

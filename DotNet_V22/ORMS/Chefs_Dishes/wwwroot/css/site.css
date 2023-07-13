@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .text-input {
+        @apply bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-5 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+    }
+    .select-input {
+        @apply bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-5 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+    }
+    .btn {
+        @apply text-white font-bold py-2 px-4 rounded;
+    }
+
+    .link {
+        @apply font-medium text-blue-600 dark:text-blue-500 hover:underline
+    }
+}

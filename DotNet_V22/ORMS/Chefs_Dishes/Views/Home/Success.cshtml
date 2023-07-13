@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Success";
+}
+
+<form asp-controller="Home" asp-action="Logout" asp-route-userId="@Context.Session.GetInt32("uid") method="post">
+    <button type="submit" class="btn bg-blue-500 hover:bg-blue-700">Logout</button>
+</form>
+
+<h1 class="p-96 text-5xl">Success!</h1>

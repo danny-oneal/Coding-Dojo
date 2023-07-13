@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<ChefViewModel>
+
+<div class="container mx-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-800">
+            <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Full Name</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Age</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">Number of Dishes</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            @foreach (var chef in Model)
+            {
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@chef.FullName</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@chef.Age</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black">@chef.NumOfDishes</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
