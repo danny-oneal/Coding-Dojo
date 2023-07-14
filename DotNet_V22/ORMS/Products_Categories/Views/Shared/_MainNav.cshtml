@@ -1,0 +1,23 @@
+@{
+    string controller = ViewContext.RouteData.Values["Controller"].ToString();
+    string action = ViewContext.RouteData.Values["Action"].ToString();
+}
+
+@* <nav class="bg-slate-400 w-full">
+        <div>
+            <ul>
+                <li class="nav-item @(controller == "Home" && action == "Index" ? "active" : "")">
+                    <a class="link" href="@Url.Action("Index", "Home")">Chefs</a>
+                </li>
+                <li class="nav-item @(controller == "Dish" && action == "Index" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("Index", "Dish")">Dishes</a>
+                </li>
+                <li class="nav-item @(controller == "Chef" && action == "New" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("New", "Chef")">Add Chef</a>
+                </li>
+                <li class="nav-item @(controller == "Dish" && action == "New" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("New", "Dish")">Add Dish</a>
+                </li>
+            </ul>
+        </div>
+</nav> *@

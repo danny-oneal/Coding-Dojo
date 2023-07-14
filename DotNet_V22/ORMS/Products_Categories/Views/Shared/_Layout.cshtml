@@ -1,0 +1,51 @@
+﻿@{
+    string controller = ViewContext.RouteData.Values["Controller"].ToString(); 
+    string action = ViewContext.RouteData.Values["Action"].ToString();
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - ProductsCategories</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/ProductsCategories.styles.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    </head>
+    <body class="bg-gray-200">
+        <header>
+            <nav class="bg-gray-800 p-2 mt-0 w-full">
+                <div class="container mx-auto flex flex-wrap items-center">
+                    <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+                        <a class="text-white no-underline hover:text-white hover:no-underline" href="@Url.Action("Index", "Home")">ProductsCategories</a>
+                    </div>
+                    <div class="flex w-full content-center justify-between md:w-1/2 md:justify-end">
+                        <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline text-white @(controller == "Product" && action == "New" ? "border-b-2 border-blue-500" : "")" href="@Url.Action("New", "Product")">Products</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline text-white @(controller == "Category" && action == "New" ? "border-b-2 border-blue-500" : "")" href="@Url.Action("New", "Category")">Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3 mt-10">@RenderBody()</main>
+        </div>
+
+        <footer class="border-top footer text-white bg-gray-800">
+            <div class="container">
+                &copy; 2023 - ProductsCategories - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
+

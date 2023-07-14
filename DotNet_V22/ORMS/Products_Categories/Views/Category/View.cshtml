@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "View Category";
+}
+
+@model Category
+
+<h1 class="text-5xl font-bold mb-4 text-center">@Model.Name</h1>
+<div class="grid grid-cols-2">
+    <div>
+
+        <h2 class="text-3xl mb-2 font-bold">Products</h2>
+        <ul class="grid gap-5">
+            @foreach (var productCategory in Model.Products)
+            {
+                <form asp-controller="Category" asp-action="RemoveProduct" asp-route-categoryId="@Model.CategoryId" method="post">
+                    <input type="hidden" name="productId" value="@productCategory.ProductId" />
+                    <li class="grid grid-flow-col justify-between w-1/2">@productCategory.Product.Name <button type="submit" class="inline bg-red-500 hover:bg-red-600 text-white p-2 text-lg rounded">Remove Product</button></li>
+                </form>
+            }
+        </ul>
+    </div>
+
+    <div>
+        <h2 class="text-3xl mb-2 font-bold">Add Product</h2>
+        @if(ViewBag.Products.Count == 0)
+        {
+            <p>No categories available</p>
+        }
+        else
+        {
+            <form asp-controller="Category" asp-action="AddProduct" asp-route-categoryId="@Model.CategoryId" method="post">
+                    <select id="product" name="productId" class="w-full border py-2 px-3 mb-4 text-grey-darkest">
+                        @foreach (var product in ViewBag.Products)
+                        {
+                            <option value="@product.ProductId">@product.Name</option>
+                        }
+                    </select>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white uppercase text-lg mx-auto p-2 rounded">Add Product</button>
+            </form>
+        }
+    </div>
+</div>
